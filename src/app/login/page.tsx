@@ -30,8 +30,14 @@ export default function LoginPage() {
     );
 
     if (user) {
+      // ✅ บันทึก currentUser เมื่อล็อกอินสำเร็จ
+      localStorage.setItem("currentUser", JSON.stringify({ 
+        name: user.name,
+        email: user.email 
+      }));
+      
       alert(`เข้าสู่ระบบสำเร็จ! สวัสดี ${user.name}`);
-      router.push("/home"); // 👉 เข้าหน้า home
+      router.push("/home");
     } else {
       alert("อีเมลหรือรหัสผ่านไม่ถูกต้อง");
     }
@@ -63,13 +69,13 @@ export default function LoginPage() {
 
           <form
             className="flex flex-col gap-5"
-            onSubmit={handleSubmit(onSubmit)} // 👈 ต้องใส่
+            onSubmit={handleSubmit(onSubmit)}
           >
             <div>
               <input
                 type="email"
                 placeholder="อีเมล"
-                {...register("email")} // 👈 เชื่อม react-hook-form
+                {...register("email")}
                 className="w-full p-3 bg-white border-b border-gray-400 shadow-inner shadow-gray-50/50 rounded-none focus:outline-none focus:border-blue-800 focus:ring-0 transition placeholder-gray-500"
               />
               {errors.email && (
@@ -83,7 +89,7 @@ export default function LoginPage() {
               <input
                 type="password"
                 placeholder="รหัสผ่าน"
-                {...register("password")} // 👈 เชื่อม react-hook-form
+                {...register("password")}
                 className="w-full p-3 bg-white border-b border-gray-400 shadow-inner shadow-gray-50/50 rounded-none focus:outline-none focus:border-blue-800 focus:ring-0 transition placeholder-gray-500"
               />
               {errors.password && (

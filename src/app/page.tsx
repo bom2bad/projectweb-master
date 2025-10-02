@@ -30,16 +30,21 @@ export default function LoginPage() {
     );
 
     if (user) {
+      // ✅ บันทึก currentUser เมื่อล็อกอินสำเร็จ
+      localStorage.setItem("currentUser", JSON.stringify({ 
+        name: user.name,
+        email: user.email 
+      }));
+      
       alert(`เข้าสู่ระบบสำเร็จ! สวัสดี ${user.name}`);
-      router.push("/home"); // 👈 กดแล้วไปหน้า home
+      router.push("/home");
     } else {
       alert("อีเมลหรือรหัสผ่านไม่ถูกต้อง");
     }
   };
 
  return (
- <div className="flex items-center justify-center min-h-screen bg-gray-50"> 
-      
+ <div className="flex items-center justify-center min-h-screen bg-gray-50">    
       
       <div className="flex w-[750px] bg-white shadow-xl rounded-xl overflow-hidden transform hover:shadow-2xl transition duration-300"> 
         

@@ -38,16 +38,16 @@ export default function Home() {
       <div className="shadow-lg shadow-red p-3   rounded justify-center  text-center space-x-4 bg-gradient-to-r to-blue-600">
 
         <Link href="/home" className="text-grey-400 hover:text-gray-400 px-4">
-          หน้าหลัก
+          หน้าหลัก 
         </Link>
         <Link href="/home" className="text-grey-400 hover:text-gray-400 px-4">
           การจองห้อง
         </Link>
         <Link href="/home" className="text-grey-400 hover:text-gray-400 px-4">
-          ตรวจสอบการจอง
+          ตรวจสอบการจอง 
         </Link>
         <Link href="/search-room" className="text-grey-400 hover:text-gray-400 px-4">
-          ค้นหาห้อง
+          ค้นหาห้อง 🔍︎
         </Link>
         
         
@@ -56,13 +56,13 @@ export default function Home() {
       <div className="p-10 flex justify-center">
         <Link href="/room/" className="hover:scale-105 transition-transform  ">
           <h1 className="text-2xl   bg-white shadow-lg p-5 w-80 rounded-lg text-right ">การจองห้อง
-            <p className="text-gray-500 text-sm text-right">Room usage rules</p>
+            <p className="text-gray-500 text-sm text-right">Booking a room</p>
           </h1>
 
         </Link>
         <Link href="/my-booking/" className="hover:scale-105 transition-transform  px-10">
           <h1 className="text-2xl  bg-white shadow-lg p-5 w-80 rounded-lg text-right">ข้อมูลการจองห้อง
-            <p className="text-gray-500 text-sm text-right">Room usage rules</p>
+            <p className="text-gray-500 text-sm text-right">Room booking information</p>
           </h1>
         </Link>
         <Link href="/room/" className="hover:scale-105 transition-transform  ">
