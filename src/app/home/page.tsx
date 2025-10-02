@@ -46,6 +46,11 @@ export default function Home() {
         <Link href="/home" className="text-grey-400 hover:text-gray-400 px-4">
           ตรวจสอบการจอง
         </Link>
+        <Link href="/search-room" className="text-grey-400 hover:text-gray-400 px-4">
+          ค้นหาห้อง
+        </Link>
+        
+        
         
       </div>
       <div className="p-10 flex justify-center">
